@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk";
+  box-shadow: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: rgb(200, 200, 200);
+  font-weight: 500;
+}
+body {
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  overflow: hidden;
+}
+
+.left-side {
+  position: relative;
+  width: 30%;
+  height: 100vh;
+  background-image: url("images/bg-main-desktop.png");
+  background-size: cover;
+}
+.right-side {
+  width: 70%;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  color: white;
+}
+.card-front {
+  position: absolute;
+  left: 150px;
+  top: 150px;
+  background-image: url("images/bg-card-front.png");
+  background-size: auto;
+
+  width: 400px;
+  height: 220px;
+  border-radius: 10px;
+}
+.circles {
+  display: flex;
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.big-cricle {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+}
+.small-circle {
+  width: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 15px;
+  border-radius: 100%;
+  border: 1px solid white;
+  background-color: transparent;
+}
+#cardNumberFront {
+  margin-left: 20px;
+  color: white;
+  font-size: 32px;
+}
+#card-info {
+  margin: 20px;
+  margin-left: 20px;
+  color: white;
+}
+.expire {
+  float: right;
+  color: white;
+}
+.card-back {
+  position: absolute;
+  left: 200px;
+  top: 390px;
+  background-image: url("images/bg-card-back.png");
+  background-size: 400px 220px;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 220px;
+  border-radius: 10px;
+}
+#codeFront {
+  position: absolute;
+  color: white;
+  left: 320px;
+  top: 97px;
+}
+form,
+#success {
+  color: #220930;
+  margin: auto;
+  margin-top: 200px;
+  margin-left: 400px;
+  width: 30%;
+  display: block;
+}
+#success {
+  display: none;
+  text-align: center;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+input {
+  width: 96%;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+.warn,
+.warn:focus {
+  border: 1px solid red;
+}
+input:focus {
+  outline: none;
+  border: 1px solid blueviolet;
+}
+#warnCardNum,
+#warnCardExpireM,
+#warnCardExpireMEmpty,
+#warnCardExpireY,
+#warnCardExpireYEmpty,
+#warnCardExpireMNum,
+#warnCardExpireYNum,
+#warnCardCVC,
+#warnCardCVCEmpty,
+#warnCardNumEmpty {
+  color: red;
+  display: none;
+}
+.small-input {
+  width: 15%;
+}
+.medium-input {
+  width: 33%;
+  float: right;
+  margin-left: 53px;
+}
+.confirm {
+  background-color: #220930;
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border-color: blueviolet;
+}
+.confirm:hover {
+  box-shadow: 0px 0px 5px purple;
+  border-color: blueviolet;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-side {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    background-image: url("images/bg-main-desktop.png");
+    background-size: cover;
+  }
+  .right-side {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    color: white;
+  }
+  .card-front {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 150px;
+    background-image: url("images/bg-card-front.png");
+    background-size: auto;
+  
+    width: 300px;
+    height: 165px;
+    border-radius: 10px;
+  }
+  .circles {
+    display: flex;
+    margin: 20px;
+    margin-bottom: 30px;
+  }
+  .big-cricle {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+  }
+  .small-circle {
+    width: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 15px;
+    border-radius: 100%;
+    border: 1px solid white;
+    background-color: transparent;
+  }
+  #cardNumberFront {
+    margin-left: 20px;
+    color: white;
+    font-size: 16px;
+  }
+  #card-info {
+    margin: 20px;
+    margin-left: 20px;
+    color: white;
+  }
+  .expire {
+    float: right;
+    color: white;
+  }
+  .card-back {
+    position: relative;
+    left: 80%;
+    transform: translateX(-80%);
+    top: 50px;
+    background-image: url("images/bg-card-back.png");
+    background-size: 300px 165px;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 165px;
+    border-radius: 10px;
+  }
+  #codeFront {
+    position: absolute;
+    color: white;
+    left: 240px;
+    top: 70px;
+  }
+  form,
+  #success {
+    color: #220930;
+    margin: auto;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-80%);
+    width: 90%;
+    display: block;
+  }
+  #success{
+    display: none;
+  }
+}
